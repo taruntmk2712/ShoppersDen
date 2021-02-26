@@ -14,6 +14,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao{
     private Statement statement;
 
     public ShoppingCartDaoImpl(){
+        conn= PostgresConnHelper.getConnection();
         if(conn!=null)
             System.out.println("Connection ready...");
         else
